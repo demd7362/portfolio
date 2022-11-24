@@ -11,7 +11,7 @@
 |:green_square:|컨테이너 영역|정적|
 |:blue_square:|컨테이너 영역|정적|
 |:purple_square:|컨테이너 영역|정적|
-|:brown_square:|푸터 영역|적|스크롤 버튼|
+|:brown_square:|푸터 영역|정적|스크롤 버튼|
 
 
 
