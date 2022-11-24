@@ -85,6 +85,11 @@ body.active {
     top: 15px;
 }
 
+.navbar_toggleBtn:hover {
+    color: var(--accent-color);
+    border-radius: 3px;
+}
+
 
 .no-js #experience-timeline>div {
     background: #fff;
@@ -800,9 +805,13 @@ footer {
     #about p {
         text-align: left
     }
+    
+    
 }
 
 @media only screen and (max-width: 768px) {
+    
+    
     .navbar {
         flex-direction: column;
         margin: 0;
@@ -834,10 +843,7 @@ footer {
         display: block;
     }
 
-    .navbar__menu.active,
-    .navbar__icons.active {
-        display: flex;
-    }
+    
 
 
     #mobile-menu-open,
@@ -845,7 +851,7 @@ footer {
         display: block
     }
 
-
+    
 
 
 
