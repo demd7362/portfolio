@@ -1,4 +1,16 @@
-![1](https://user-images.githubusercontent.com/115058411/203689682-ef60cc01-df88-47c8-8123-75462ec42a2b.png)
+<img src="https://user-images.githubusercontent.com/115058411/203702348-fb2156fc-b847-4434-9678-a357ce6660df.png" width="30%" height="25%">
 
-<span style="color:red">빨간색</span>
+
+|테두리 색|종류|동작|비고|
+|:---:|:---:|:---:|:---:|
+|:red_square:|헤더 영역|동적|GNB, 기능형 아이콘|
+|:orange_square:|컨테이너 영역|동적|스크롤 버튼|
+|:yellow_square:|컨테이너 영역|정적|
+|:green_square:|컨테이너 영역|정적|
+|:blue_square:|컨테이너 영역|정적|
+|:purple_square:|컨테이너 영역|정적|
+|:brown_square:|푸터 영역|동적|스크롤 버튼|
+
+
+
 
