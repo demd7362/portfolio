@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/8d10a078fa.js" crossorigin="anonymous"></script>
     <script>
         $(function () {
+            // 네비게이션 바 슬라이드
             $(".navbar_toggleBtn").on("click", function () {
                 if ($(".navbar_menu").css("display") == "none") {
                     $(".navbar_menu").slideDown(500, function () {
@@ -30,6 +31,17 @@
                 }
             });
 
+            // 반응형 네비게이션 바 메뉴 사라짐 방지
+            $(window).resize(function () {
+                if ($(window).width() > 768 && $(".navbar_menu").css("display") == "none" ) {
+                    $(".navbar_menu").css("display","flex");
+                    $(".navbar_icons").css("display","flex");
+                        
+
+                }
+            });
+
+
             $("#to-top").on("click", function () {
                 $("html, body").animate({
                     scrollTop: 0
@@ -44,19 +56,19 @@
                 }, 500);
             });
 
-            $(".navbar_menu gt(0)").click(function (e) {
-                e.preventDefault();
-                var scrollPosition = $($(this).attr("href")).offset().top;
-                $("html, body").stop().animate({
-                    scrollTop: scrollPosition
-                }, 700);
+            $(".navbar_menu gt(0)").click(function () {
+                var scrollDistance = $(this).next().offset().top;
+                $("html, body").animate({
+                    
+                    scrollTop: scrollDistance + "px"
+                }, 500);
             });
 
         });
         function copyEmailAdd() {
             var copyText = document.createElement("textarea");
             document.body.appendChild(copyText);
-            copyText.value = 'demd4784@gmail.com';
+            copyText.value = 'demd7362@gmail.com';
             copyText.select();
             document.execCommand('copy');
             document.body.removeChild(copyText);
@@ -87,7 +99,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="copyEmailAdd();">
+                    <a href="tel:010-4544-7362">
+                        <i class="fa-solid fa-phone" title="면접자에게 전화합니다."></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:demd7362@gmail.com" onclick="copyEmailAdd()">
                         <i class="fa-solid fa-envelope" title="면접자의 이메일 주소를 클립보드에 복사합니다."></i>
                     </a>
                 </li>
@@ -123,7 +140,14 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat
+                        laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget
+                        efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec eu vehicula neque. Donec
+                        viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id
+                        pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc
+                        justo, finibus ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et,
+                        congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus
+                        risus enim non leo.
                     </p>
                 </div>
             </div>
